@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+
+<h1 style="font-size: 18px; font-weight: bold; text-align: center;">কাউন্টডাউন শেষে আপনি স্বয়ংক্রিয়ভাবে রিডাইরেক্ট হবেন</h1>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Redirect</title>
+<style>
+#countdown {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 8px solid #007BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #007BFF;
+  margin: 40px auto;
+  position: relative;
+}
+#countdown span {
+  position: absolute;
+}
+</style>
+</head>
+<body>
+<div id="countdown"><span id="timer">10</span></div>
+
+
+<script>
+(function(){
+  var seconds = 10;
+  var timerEl = document.getElementById('timer');
+  var redirectUrl = "https://data156.click/296c0137adf14c9ded4c/c5dff9cceb/?placementName=Nadiya2";
+  var interval = setInterval(function(){
+    seconds--;
+    if(seconds <= 0){
+      clearInterval(interval);
+      window.location.href = redirectUrl;
+    } else {
+      timerEl.textContent = seconds;
+    }
+  },1000);
+})();
+</script>
+</body>
+</html>
